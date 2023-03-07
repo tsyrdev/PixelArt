@@ -1,0 +1,86 @@
+
+* { /* You may need to include the before and after pseudo selectors */ 
+    
+    padding: 0;
+    margin: 0;
+    
+    /* You can also instead of setting box-sizing to box-border set to inherit and 
+    have an html selector with box-sizing set to border-box, that way, if you want an element
+    with box-size set to content-box all of its children will have border-box set as 
+    content-box as well */
+    box-sizing: border-box;
+
+    font-family: monospace;
+}
+
+body {
+    background-color: #43a047;  
+}
+
+.wrapper {
+    background-color: white;
+
+    /* vmin and vmax are viewport units. 80vmin basically means 80% of 
+    the smaller viewport for you its probably going to be the width if 
+    youre coding this */
+    width: 80vmin;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 40px 20px;
+    border-radius: 8px;
+
+    transform: translate(-50%, -50%);
+}
+
+label {
+    display: block;
+}
+
+span {
+    position: relative;
+    font-size: 22px;
+    bottom: -1px;
+}
+
+.opt-wrapper {
+    display: flex; 
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+button {
+    background-color: #43a047;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    color: #fff;
+}
+
+input[type="color"] {
+    appearance: none;
+    background-color: transparent;
+    width: 70px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+.gridCol {
+    height: 1em;
+    width: 1em;
+    border: 1px solid #ddd;
+}
+
+.gridRow {
+    display: flex;
+}
+
+@media only screen and (max-width: 768px) {
+    .gridCol {
+        height: 0.8em;
+        width: 0.8em;
+    }
+} 
